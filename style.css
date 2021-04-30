@@ -178,6 +178,13 @@ section.services h3 {
 
 }
 
+.first {
+    order: 1
+}
+
+.second {
+    order: 2
+}
 section.services ul {
     list-style-type: none;
 }
@@ -210,7 +217,12 @@ section.services li {
     .container {
         width: 100%
     }
-
+    .first {
+        order: 2;
+    }
+    .second {
+        order: 1;
+    }
     .grid {
         height: 50vh;;
     }
