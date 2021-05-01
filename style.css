@@ -28,27 +28,42 @@ a {
     color: white
 }
 
-button {
-    padding: 0.2rem 2rem;
-}
-
 header {
     background-color: var(--bgcolor);
     color: white;
 }
 
 .container {
-    width: 1100px;
+    width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 nav {
     padding: 20px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav.sticky {
+    position: fixed; 
+    width: 60%;
+    justify-content: space-around;
+    background-color: rgba(254, 254, 255, 0.9);
+    color: var(--font-color);
+
+}
+
+nav.sticky a{
+    color: var(--font-color)
+}
+nav.sticky img {
+    background-color: var(--font-color);
+    border-radius: 70%;
 }
 
 nav li {
@@ -59,7 +74,7 @@ nav li {
     margin-right: 1rem;
 }
 
-nav li a { 
+nav  a { 
     color: white;
 }
 
@@ -85,6 +100,9 @@ nav h3 {
     flex-direction: column;
     flex-wrap: no-wrap;
     z-index: 2;
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
 }
 
 .name h1 {
@@ -102,10 +120,18 @@ nav h3 {
     font-family: Antonio, Lato, sans-serif;
     font-size: 6vw;
 }
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .occupation {
     /* border: 1px solid aquamarine; */
     grid-area: 9 / 2 / 10 / 11;
     z-index: 3;
+    animation-name: opacity;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
 }
 
 .occupation h4 {
@@ -117,17 +143,25 @@ nav h3 {
 
 .rect1 {
     grid-area: 5 / 4 / 8 / 10;
+    animation-name: opacity;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 .rect2 {
     grid-area: 2 / 9 / 9 / 11;
     z-index: 1;
+    animation-name: opacity, turn;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
 }
-/* .line {
-    height: 2px;
-    background-color: white;
-} */
 
+@keyframes turn {
+    0% {transform: rotate(-180deg);}
+    50% {tranaform: rotate(90deg);}
+    100% {tranaform: rotate(90deg);}
+
+}
 .slant {
     height: 120px;
     background-color: var(--bgcolor);
@@ -151,7 +185,7 @@ section.divider h2 {
 
 section.services {
     border-top: 1px solid var(--font-color);
-    padding: 2rem 0;
+    padding: 4rem 0 1rem 0;
     margin: 1rem 0;
     display: flex;
     justify-content: space-between;
@@ -161,8 +195,9 @@ section.services {
 
 section.services div {
     width: 50%;
-    height: 350px;
+    height: 400px;
     padding: 0.5rem;
+    overflow: hidden;
 }
 
 section.services div img {
@@ -213,7 +248,12 @@ section.services li {
     color: rgb(218, 38, 173);;
 }
 
+
+/* Tablets */
 @media only screen and (max-width: 1080px) {
+    nav.sticky {
+        width: 100%;
+    }
     .container {
         width: 100%
     }
@@ -268,6 +308,7 @@ section.services li {
     }
 }
 
+/* Mobile */
 @media only screen and (max-width: 500px) {
     .grid {
         min-height: 40vh;
