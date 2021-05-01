@@ -36,19 +36,28 @@ headerObserver.observe(header);
 // })
 
 
+// document.querySelectorAll('.navlink').forEach(function(el) {
+//     el.addEventListener('click', function(e) {
+//         e.preventDefault();
+//         const id = this.getAttribute('href');
+
+//         document.querySelector(id).getBoundingClientRect().top + nav.offsetHeight;
+
+//         window.scrollTo({
+//         left: document.querySelector(id).getBoundingClientRect().top + window.pageXOffset,
+//         top: document.querySelector(id).getBoundingClientRect().top - (nav.offsetHeight * 2) + window.pageYOffset,
+//         behavior: "smooth"
+//     })
+//         document.querySelector(id)
+//     })
+// })
+
 document.querySelectorAll('.navlink').forEach(function(el) {
     el.addEventListener('click', function(e) {
         e.preventDefault();
         const id = this.getAttribute('href');
-
-        document.querySelector(id).getBoundingClientRect().top + nav.offsetHeight;
-
-        window.scrollTo({
-        left: document.querySelector(id).getBoundingClientRect().top + window.pageXOffset,
-        top: document.querySelector(id).getBoundingClientRect().top - (nav.offsetHeight * 2) + window.pageYOffset,
-        behavior: "smooth"
-    })
-        document.querySelector(id)
+        const top =document.querySelector(id).getBoundingClientRect().top - (nav.offsetHeight * 2) + window.pageYOffset;
+        scrollToSmoothly(top , 500)
     })
 })
 
@@ -70,3 +79,26 @@ tabContainer.addEventListener('click', function(e) {
     tabArticles.forEach(t => t.classList.remove('tabarticle--active'))
     document.querySelector(`.content--${clickedTab.dataset.tab}`).classList.add('tabarticle--active')
 })
+
+
+// Safari Smooth scroll
+function scrollToSmoothly(pos, time) {
+    var currentPos = window.pageYOffset;
+    var start = null;
+    if(time == null) time = 500;
+    pos = +pos, time = +time;
+    window.requestAnimationFrame(function step(currentTime) {
+        start = !start ? currentTime : start;
+        var progress = currentTime - start;
+        if (currentPos < pos) {
+            window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+        } else {
+            window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+        }
+        if (progress < time) {
+            window.requestAnimationFrame(step);
+        } else {
+            window.scrollTo(0, pos);
+        }
+    });
+}
