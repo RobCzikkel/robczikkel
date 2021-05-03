@@ -33,13 +33,13 @@ document.querySelectorAll('.navlink').forEach(function(el) {
     })
 })
 
-// Tabbed content
+// Tabbed content - Services
 const tabs = document.querySelectorAll('.tab');
-const tabContainer = document.querySelector('.tabs');
+const tabContainer1 = document.querySelector('.tabs1');
 const tabArticles = document.querySelectorAll('.articletab');
-const tabContent = document.querySelector('.tabcontent') 
+const tabContent1 = document.querySelector('.tabcontent1') 
 
-tabContainer.addEventListener('click', function(e) {
+tabContainer1.addEventListener('click', function(e) {
     const clickedTab = e.target.closest('.tab');
 
     if(!clickedTab) return;
@@ -51,12 +51,35 @@ tabContainer.addEventListener('click', function(e) {
     clickedTab.classList.add('dark-bg', 'light-font')
 
     // Tabcontent
-    tabContent.classList.remove('dark-bg', 'light-font')
-    if (clickedTab.dataset.tab == 2) tabContent.classList.add('dark-bg', 'light-font')
+    tabContent1.classList.remove('dark-bg', 'light-font')
+    if (clickedTab.dataset.tab == 2) tabContent1.classList.add('dark-bg', 'light-font')
 
     //Active article
     tabArticles.forEach(t => t.classList.remove('articletab--active'))
     document.querySelector(`.content--${clickedTab.dataset.tab}`).classList.add('articletab--active')
+})
+
+// Tabbed content - Portfolio
+const tabContainer2 = document.querySelector('.tabs2');
+
+tabContainer2.addEventListener('click', function(e) {
+    const clickedTab = e.target.closest('.tab');
+
+    if(!clickedTab) return;
+
+    //Active tab
+    tabs.forEach(t => {
+        t.classList.remove('light-bg', 'dark-font')
+    })
+    clickedTab.classList.add('light-bg', 'dark-font')
+
+    // Tabcontent
+    // tabContent.classList.remove('dark-bg', 'light-font')
+    // if (clickedTab.dataset.tab == 2) tabContent.classList.add('dark-bg', 'light-font')
+
+    // //Active article
+    // tabArticles.forEach(t => t.classList.remove('articletab--active'))
+    // document.querySelector(`.content--${clickedTab.dataset.tab}`).classList.add('articletab--active')
 })
 
 
