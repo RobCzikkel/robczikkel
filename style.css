@@ -167,7 +167,8 @@ nav h3 {
     transform: translateY(100px)
 }
 .border {
-    box-shadow: 1px 1px 2px 1px rgb(221, 216, 216);
+    /* border: 1px solid rgb(221, 216, 216); */
+    box-shadow: 0px 3px 10px rgba(0,0,0, 0.2);
 }
 .moveUp {
     transform: translateY(-600px)
@@ -217,7 +218,6 @@ section.section {
     overflow:visible;
     height: 600px;
     margin: 5rem 0 1rem 0;
-
 }
 
 .center {
@@ -355,6 +355,10 @@ h6 {
     padding: 1rem;
 }
 
+.portfoliotab {
+    display: none
+}
+
 .grid-item-web {
     min-height: 320px;
     border-radius: 30px;
@@ -431,6 +435,54 @@ h6 {
     left: 50%;
     opacity: 1;
   }
+
+.section form {
+    margin:2rem 0 1rem 0;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-control {
+    margin: 0.4rem 0;
+    width: 400px
+}
+
+.form-control input[type="text"],
+.form-control input[type="email"],
+.form-control textarea {
+    padding:0.5rem;
+    width: 100%;
+}
+
+
+
+.form-control input[type="submit"] {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: var(--bgcolor);
+    color: white;
+}
+
+.form-control input[type="submit"]:hover {
+    padding: 0.5rem 2rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: white;
+    color: var(--bgcolor);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
 
 
 /******************* Media Queries *******************/
@@ -526,5 +578,7 @@ h6 {
     .portfolio--active {
         grid-template-columns: 270px;
     }
-    
+    .form-control {
+        width: 270px
+    }
 }

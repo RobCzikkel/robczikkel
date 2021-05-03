@@ -59,12 +59,15 @@ tabContainer1.addEventListener('click', function(e) {
     document.querySelector(`.content--${clickedTab.dataset.tab}`).classList.add('articletab--active')
 })
 
+
 // Tabbed content - Portfolio
 const tabContainer2 = document.querySelector('.tabs2');
+const tabContent2 = document.querySelector('.tabcontent2') 
+const tabPortfolios = document.querySelectorAll('.articletab');
 
 tabContainer2.addEventListener('click', function(e) {
     const clickedTab = e.target.closest('.tab');
-
+    console.log(tabPortfolios)
     if(!clickedTab) return;
 
     //Active tab
@@ -74,12 +77,13 @@ tabContainer2.addEventListener('click', function(e) {
     clickedTab.classList.add('light-bg', 'dark-font')
 
     // Tabcontent
-    // tabContent.classList.remove('dark-bg', 'light-font')
-    // if (clickedTab.dataset.tab == 2) tabContent.classList.add('dark-bg', 'light-font')
+    // tabContent2.classList.remove('light-bg', 'pink')
+    // if (clickedTab.dataset.tab == 2) tabContent2.classList.add('light-bg');
+    // else tabContent2.classList.add('pink');
 
     // //Active article
-    // tabArticles.forEach(t => t.classList.remove('articletab--active'))
-    // document.querySelector(`.content--${clickedTab.dataset.tab}`).classList.add('articletab--active')
+    tabPortfolios.forEach(t => t.classList.remove('portfolio--active'))
+    document.querySelector(`.portfolio--${clickedTab.dataset.tab}`).classList.add('portfolio--active')
 })
 
 

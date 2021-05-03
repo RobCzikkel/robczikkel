@@ -181,13 +181,53 @@
             <div class="center">
                 <h2 class="light-font">PORTFOLIO</h2>
                 <div class="tabs tabs2 tabs--dark">
-                    <div class="tab light-bg dark-font" data-tab="1"><h3>WEB</h3></div>
-                    <div class="tab" data-tab="2"><h3>DATA</h3></div>
+                    <div class="tab " data-tab="1"><h3>WEB</h3></div>
+                    <div class="tab light-bg dark-font" data-tab="2"><h3>DATA</h3></div>
                 </div>
-                <div class="tabcontent moveDown border light-bg">
-                    <article class="articletab portfolio--active">
+                <div class="tabcontent tabcontent2 moveDown border light-bg">
+                    <article class="articletab portfolio--1 ">
                         <!-- Tile with hover effect -->
+                        <div class="grid-item-web light-font dark-bg">
+                            <div class="tile-front">
+                                <h4>Excursion</h4>
+                                <h6 class="aqua dark-font">JS (ES6)</h6>
+                                <h6 class="aqua dark-font">Flexbox</h6>
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="tile-details">
+                                <p>Pactise Project for Codecademy course</p>
+                                <a href="https://github.com/RobCzikkel/excursion" target="_blank">(GitHub repo)</a>
+                              </div>
+                        </div>
 
+                        <div class="grid-item-web dark-bg light-font">
+                            <div class="tile-front">
+                                <h4>Coming Soon</h4>
+                               
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="tile-details">
+                                <h4>Coming Soon</h4>
+                                <!-- <p>In this fun project I use classification models to predict game outcomes between the Brooklyn Nets and the LA Lakers.<br><br> Click on the link below to see the notebook</p>
+                                <a href="">(Jupyter Notebook)</a> -->
+                              </div>
+                        </div>
+
+                        <div class="grid-item-web dark-bg light-font">
+                            <div class="tile-front">
+                                <h4>Coming Soon</h4>
+
+                            </div>
+                            <div class="overlay"></div>
+                            <div class="tile-details">
+                                <h4>Coming Soon</h4>
+                                <!-- <p>In this fun project I use classification models to predict game outcomes between the Brooklyn Nets and the LA Lakers.<br><br> Click on the link below to see the notebook</p>
+                                <a href="">(Jupyter Notebook)</a> -->
+                              </div>
+                            </div>
+                    </article>
+
+                    <article class="articletab portfolio--2 portfolio--active">
                         <div class="grid-item-web dark-bg light-font">
                             <div class="tile-front">
                                 <h4>Vehicle Loan default prediction</h4>
@@ -227,14 +267,35 @@
                                 <a href="">(Jupyter Notebook)</a> -->
                               </div>
                         </div>
-
                     </article>
-                    <article class="articletab"></article>
                 </div>
             </div>
         </div>
-    
-        
+   
+    <section class="section moveUp dark-bg light-font" id="contact">
+        <div class="center">
+            <h2 class="light-font">CONTACT</h2>
 
+            <form action="" method="post">
+
+                <section class="form-control">
+                    <input name="name" type="text" placeholder="NAME" required> 
+                </section>
+                <section class="form-control">
+                    <input name="email" type="email" placeholder="EMAIL" required>
+                </section>
+               
+                <section class="form-control">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="WRITE YOUR MESSAGE"></textarea>
+                </section>
+                <section class="form-control">
+                    <input type="submit" value="SEND">
+                </section>
+            </form>
+        </div>
+    </section>
+    <footer class="moveUp">
+        <p>2021</p>
+    </footer>
 </body>
 </html>
