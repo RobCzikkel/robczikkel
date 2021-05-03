@@ -163,6 +163,9 @@ nav h3 {
 }
 
 /*******************  Utilities *******************/
+.moveDown {
+    transform: translateY(100px)
+}
 .border {
     box-shadow: 1px 1px 2px 1px rgb(221, 216, 216);
 }
@@ -435,7 +438,7 @@ h6 {
 /* Tablets */
 @media only screen and (max-width: 1180px) {
     .tabcontent {
-        width: 80%;
+        width: 90%;
     }
     nav.sticky {
         width: 100%;
@@ -482,6 +485,15 @@ h6 {
     }
 }
 
+@media only screen and (max-width: 720px) {
+    .portfolio--active {
+        grid-template-columns: 200px 200px;
+    }
+    .grid-item-web {
+        min-height: 250px;
+    }
+}
+
 /* Mobile */
 @media only screen and (max-width: 500px) {
     .grid {
@@ -512,7 +524,7 @@ h6 {
         min-width: 270px;
     }
     .portfolio--active {
-        grid-template-columns: 400px;
+        grid-template-columns: 270px;
     }
     
 }
