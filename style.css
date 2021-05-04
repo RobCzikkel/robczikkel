@@ -163,8 +163,11 @@ nav h3 {
 }
 
 /*******************  Utilities *******************/
+.whitespace{
+    height: 100px;
+}
 .moveDown {
-    transform: translateY(100px)
+    transform: translateY(60px)
 }
 .border {
     /* border: 1px solid rgb(221, 216, 216); */
@@ -216,8 +219,8 @@ section.section {
     width: 100%;
     display: flex;
     overflow:visible;
-    height: 600px;
-    margin: 5rem 0 1rem 0;
+    height: 100px;
+    margin: 3.5rem 0 1rem 0;
 }
 
 .center {
@@ -272,6 +275,7 @@ section.section {
     height: auto;
     padding: 2rem 0;
     border-radius: 30px;
+
 }
 .description {
     margin: 0 auto;
@@ -344,6 +348,10 @@ h6 {
 }
 
 /******************* Portfolio *******************/
+#portfolio{
+    height: 700px;
+    margin-bottom: 14rem;
+}
 .portfolio--active {
     width: 100%;
     height: auto;
@@ -360,7 +368,7 @@ h6 {
 }
 
 .grid-item-web {
-    min-height: 320px;
+    min-height: 300px;
     border-radius: 30px;
     overflow: hidden;
     position: relative;
@@ -436,9 +444,15 @@ h6 {
     opacity: 1;
   }
 
+
+/****************** Contact form /******************/
+#contact {
+    height: 600px;
+    margin-top: 3rem;
+}
 .section form {
-    margin:2rem 0 1rem 0;
-    padding: 1rem;
+    margin:1rem 0;
+    padding: 0.5rem;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -446,7 +460,7 @@ h6 {
 
 .form-control {
     margin: 0.4rem 0;
-    width: 400px
+    width: 400px;
 }
 
 .form-control input[type="text"],
@@ -456,31 +470,32 @@ h6 {
     width: 100%;
 }
 
-
-
 .form-control input[type="submit"] {
-    width: 100%;
+
+    width: 150px;
     padding: 0.5rem 2rem;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 10px;
     background-color: var(--bgcolor);
     color: white;
 }
 
 .form-control input[type="submit"]:hover {
-    padding: 0.5rem 2rem;
-    border: 1px solid white;
-    border-radius: 10px;
-    background-color: white;
-    color: var(--bgcolor);
+    /* background-color: white;
+    color: var(--bgcolor); */
+    background-color: rgb(218, 38, 173);
+    transform: scale(1.05) translate(-2px, -2px);
 }
 
 footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 50px;
+    height: 250px;
     padding: 3rem 1rem 1rem 1rem;
+
 }
 
 
@@ -533,7 +548,7 @@ footer {
         min-width: 300px;
     }
     .portfolio--active {
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(3, 250px);
     }
 }
 
@@ -548,6 +563,7 @@ footer {
 
 /* Mobile */
 @media only screen and (max-width: 500px) {
+
     .grid {
         min-height: 40vh;
     };
@@ -580,5 +596,8 @@ footer {
     }
     .form-control {
         width: 270px
+    }
+    .whitespace{
+        height: 380px;
     }
 }
