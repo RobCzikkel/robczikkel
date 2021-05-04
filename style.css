@@ -213,8 +213,15 @@ nav h3 {
     color: white;
 }
 
+.reveal {
+    transition: transform 1s, opacity 1s;
+}
 
 /******************* Services *******************/
+.reveal--hidden {
+    opacity: 0;
+}
+
 section.section {
     width: 100%;
     display: flex;

@@ -7,7 +7,6 @@ console.log(header)
 // Sticky Nav
 const stickyNav = (entries) => {
     const [entry] = entries;
-    console.log(entry)
 
     if(!entry.isIntersecting) nav.classList.add('sticky');
     else nav.classList.remove('sticky');
@@ -67,7 +66,6 @@ const tabPortfolios = document.querySelectorAll('.articletab');
 
 tabContainer2.addEventListener('click', function(e) {
     const clickedTab = e.target.closest('.tab');
-    console.log(tabPortfolios)
     if(!clickedTab) return;
 
     //Active tab
@@ -75,11 +73,6 @@ tabContainer2.addEventListener('click', function(e) {
         t.classList.remove('light-bg', 'dark-font')
     })
     clickedTab.classList.add('light-bg', 'dark-font')
-
-    // Tabcontent
-    // tabContent2.classList.remove('light-bg', 'pink')
-    // if (clickedTab.dataset.tab == 2) tabContent2.classList.add('light-bg');
-    // else tabContent2.classList.add('pink');
 
     // //Active article
     tabPortfolios.forEach(t => t.classList.remove('portfolio--active'))
@@ -108,3 +101,25 @@ function scrollToSmoothly(pos, time) {
         }
     });
 }
+
+// Reveal elements
+const revElements = document.querySelectorAll('.reveal');
+
+const revealElement = function(entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.remove('reveal--hidden');
+    observer.unobserve(entry.target);
+}
+
+const elemObserver = new IntersectionObserver(revealElement, {
+    root: null,
+    treshold: 0.15,
+});
+
+revElements.forEach(function(element) {
+    elemObserver.observe(element);
+    element.classList.add('reveal--hidden')
+})
