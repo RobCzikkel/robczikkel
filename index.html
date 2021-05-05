@@ -22,20 +22,20 @@
         <div class="container">
 
             <!-- NavBar -->
-            <nav>
-                <h3><a class="navlink" href="#header">RC</a></h3>
+            <nav role="navigation">
+                <h3><a class="navlink" href="#header" role="link" aria-label="Home">RC</a></h3>
                 <ul>
-                    <li><a class="navlink hvr-underline-from-left" href="#services">SERVICES</a></li>
-                    <li><a class="navlink hvr-underline-from-left" href="#portfolio">PORTFOLIO</a></li>
-                    <li><a class="navlink hvr-underline-from-left" href="#contact">CONTACT</a></li>
+                    <li><a class="navlink hvr-underline-from-left" href="#services" role="link">SERVICES</a></li>
+                    <li><a class="navlink hvr-underline-from-left" href="#portfolio" role="link">PORTFOLIO</a></li>
+                    <li><a class="navlink hvr-underline-from-left" href="#contact" role="link">CONTACT</a></li>
                 </ul>
                 <figure>
-                    <a href="https://github.com/RobCzikkel" target="_blank"><img src="img/git32.png" alt="gitHub"></a>
+                    <a href="https://github.com/RobCzikkel" target="_blank" role="link"><img src="img/git32.png" alt="GitHub logo link"></a>
                 </figure>
             </nav>
             
             <!-- Hero -->
-            <div class="grid">
+            <div class="grid" role="banner">
                 <div class="name">
                     <h2>ROBERT</h2>
                     <h1>CZIKKEL</h1>
@@ -53,22 +53,22 @@
 
     <!--  Services -->
     <section class="section" id="services"></section>
-        <div class="container reveal">
+        <div class="container reveal" role="complementary">
             <div class="center">
                 <h2 class="dark-font">SERVICES</h2>
                 <div class="tabs tabs1">
-                    <div class="tab dark-bg light-font" data-tab="1"><h3>WEB</h3></div>
-                    <div class="tab" data-tab="2"><h3>DATA</h3></div>
+                    <div class="tab dark-bg light-font" data-tab="1" role="switch"><h3>WEB</h3></div>
+                    <div class="tab" data-tab="2" role="switch"><h3>DATA</h3></div>
                 </div>
                 <div class="tabcontent tabcontent1">
                     <!-- Tab 1 -->
-                    <article class="articletab content--1 articletab--active">
+                    <article class="articletab content--1 articletab--active" role="article" aria-label="Services">
                         <div class="description"><strong>In need of a website?</strong><br><br><p>Perhaps you just started a new business, or decided that your art should be on the web. Or finally made the decision to start your own online store. Whatever your needs are, I may be able to help you. </p></div>
                         <div class="services">
                             <!-- Service tile -->
                             <div class="service dark-bg light-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/front.png" alt="">
+                                    <img src="img/front.png" alt="Front end image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>FRONT END DEVELOPMENT</h4>
@@ -80,7 +80,7 @@
                             </div>
                             <div class="service dark-bg light-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/back.png" alt="">
+                                    <img src="img/back.png" alt="Back end image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>BACK END DEVELOPMENT</h4>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="service dark-bg light-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/db.png" alt="">
+                                    <img src="img/db.png" alt="Database image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>DATABASE DESIGN</h4>
@@ -103,7 +103,7 @@
                             </div>
                             <div class="service dark-bg light-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/seo.png" alt="">
+                                    <img src="img/seo.png" alt="SEO image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>SEO</h4>
@@ -116,13 +116,13 @@
                     </article>
 
                     <!-- Tab 2 -->
-                    <article class="articletab content--2">
+                    <article class="articletab content--2" role="article" aria-label="Services">
                         <div class="description light-font"><strong>In need of analytics?</strong><br><br><p>Whether you are a business, a business manager, or a civil organization, I can collect, organize and analyze data in any domain with expert skills in statistical analysis and data visualization techniques. I can also use Machine Learning models to answer your business questions.</p></div>
                         <div class="services">
                             <!-- Service tile -->
                             <div class="service light-bg dark-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/market.png" alt="">
+                                    <img src="img/market.png" alt="Market analysis image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>MARKET ANALYSIS</h4>
@@ -134,7 +134,7 @@
                             </div>
                             <div class="service light-bg dark-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/dash.png" alt="">
+                                    <img src="img/dash.png" alt="Dashboard image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>DATA DASHBOARDS</h4>
@@ -146,7 +146,7 @@
                             </div>
                             <div class="service light-bg dark-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/scrape.png" alt="">
+                                    <img src="img/scrape.png" alt="Web scraping image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>WEB SCRAPING</h4>
@@ -157,7 +157,7 @@
                             </div>
                             <div class="service light-bg dark-font hvr-radial-out">
                                 <div class="upper">
-                                    <img src="img/ml.png" alt="">
+                                    <img src="img/ml.png" alt="Machine learning image logo">
                                 </div>
                                 <div class="lower">
                                     <h4>MACHINE LEARNING</h4>
@@ -177,18 +177,18 @@
 
     <div class="whitespace"></div>
     <!-- Portfolio -->
-    <section class="section dark-bg reveal" id="portfolio">
+    <section class="section dark-bg reveal" id="portfolio" role="complementary">
         <div class="container ">
             <div class="center moveDown">
-                <h2 class="light-font">PORTFOLIO</h2>
+                <h2 class="light-font" aria-label="Portfolio">PORTFOLIO</h2>
                 <div class="tabs tabs2 tabs--dark">
-                    <div class="tab " data-tab="1"><h3>WEB</h3></div>
-                    <div class="tab light-bg dark-font" data-tab="2"><h3>DATA</h3></div>
+                    <div class="tab " data-tab="1" role="switch"><h3>WEB</h3></div>
+                    <div class="tab light-bg dark-font" data-tab="2" role="switch"><h3>DATA</h3></div>
                 </div>
                 <div class="tabcontent tabcontent2 moveDown border light-bg">
-                    <article class="articletab portfolio--1 ">
+                    <article class="articletab portfolio--1 " role="article" aria-label="Portfolio">
                         <!-- Tile with hover effect -->
-                        <div class="grid-item-web light-font dark-bg">
+                        <div class="grid-item-web light-font dark-bg" role="gridcell">
                             <div class="tile-front">
                                 <h4>Excursion</h4>
                                 <h6 class="aqua dark-font">JS (ES6)</h6>
@@ -201,7 +201,7 @@
                               </div>
                         </div>
 
-                        <div class="grid-item-web dark-bg light-font">
+                        <div class="grid-item-web dark-bg light-font" role="gridcell">
                             <div class="tile-front">
                                 <h4>Coming Soon</h4>
                                
@@ -214,7 +214,7 @@
                               </div>
                         </div>
 
-                        <div class="grid-item-web dark-bg light-font">
+                        <div class="grid-item-web dark-bg light-font" role="gridcell">
                             <div class="tile-front">
                                 <h4>Coming Soon</h4>
 
@@ -228,8 +228,8 @@
                             </div>
                     </article>
 
-                    <article class="articletab portfolio--2 portfolio--active">
-                        <div class="grid-item-web dark-bg light-font">
+                    <article class="articletab portfolio--2 portfolio--active" role="article" aria-label="Portfolio">
+                        <div class="grid-item-web dark-bg light-font" role="gridcell">
                             <div class="tile-front">
                                 <h4>Vehicle Loan default prediction</h4>
                                 <h6 class="aqua pink">Machine Learning</h6>
@@ -242,7 +242,7 @@
                               </div>
                         </div>
 
-                        <div class="grid-item-web dark-bg light-font">
+                        <div class="grid-item-web dark-bg light-font" role="gridcell">
                             <div class="tile-front">
                                 <h4>NBA game prediction</h4>
                                 <h6 class="aqua pink">Machine Learning</h6>
@@ -256,7 +256,7 @@
                               </div>
                         </div>
 
-                        <div class="grid-item-web dark-bg light-font">
+                        <div class="grid-item-web dark-bg light-font" role="gridcell">
                             <div class="tile-front">
                                 <h4>Coming Soon</h4>
 
@@ -274,11 +274,11 @@
         </div>
     </section>
     <div class="whitespace"></div>
-    <section class="section dark-bg light-font reveal" id="contact">
+    <section class="section dark-bg light-font reveal" id="contact" role="section" aria-label="Contact form">
         <div class="center">
             <h2 class="light-font">CONTACT</h2>
 
-            <form action="https://formspree.io/f/xleagobl" method="post">
+            <form action="https://formspree.io/f/xleagobl" method="post" role="form">
 
                 <section class="form-control">
                     <input name="name" type="text" placeholder="NAME" required> 
@@ -288,15 +288,15 @@
                 </section>
                
                 <section class="form-control">
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="WRITE YOUR MESSAGE"></textarea>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="WRITE YOUR MESSAGE" role="textbox"></textarea>
                 </section>
                 <section class="form-control">
-                    <button class="hvr-outline-out" type="submit" value="SEND">SEND</button>
+                    <button class="hvr-outline-out" type="submit" value="SEND" role="button">SEND</button>
                 </section>
             </form>
         </div>
     </section>
-    <footer class="dark-font reveal">
+    <footer class="dark-font reveal" role="complementary">
         <h5>Designed by Rob Czikkel</h5> 
         <br>
        <small>2021</small> 
